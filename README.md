@@ -95,6 +95,8 @@ Helper functions and values that do not yet have a better place to live.
 
 ## Strategy Overview
 
-The starter strategy is designed to highlight a few common `GameMap` functions
-and give the user a functioning example to work with. It's gameplan is to 
-draw the C1 logo, place turrets in its corners, and randomly spawn units.
+### Defensive
+The defensive model of this algo is signal back. The moving units can only exits from right side, meanwhile left side is blocked with walls. Turrents also covers the routes to enter the right side, therefore maximum the utility. 
+
+### Offensive
+The offensive model repetitively runs a 5-round model. For the first three 3 rounds, demolishers will be released to destory the opponent defense, and the interceptors will be released at the second rounds to prevent swarm attack. For the last two rounds, swarms of scouts will be released to score.
